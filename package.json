@@ -1,0 +1,53 @@
+{
+  "name": "dsh-folder-wallpaper",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 照片壁纸轮播：读取本地文件夹里的照片，作为界面背景自动轮播，并把面板做成半透明毛玻璃。",
+  "type": "module",
+  "license": "MIT",
+  "author": "feng183043996",
+  "homepage": "https://github.com/feng183043996/dsh-folder-wallpaper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feng183043996/dsh-folder-wallpaper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feng183043996/dsh-folder-wallpaper/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wallpaper",
+    "background",
+    "slideshow",
+    "photo"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
